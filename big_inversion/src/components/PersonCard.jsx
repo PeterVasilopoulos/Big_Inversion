@@ -1,18 +1,15 @@
-import React, { Component } from 'react'
+import React, {useState} from 'react'
 
-export default class PersonCard extends Component {
-    constructor(props) {
-        super(props);
+const PersonCard = (props) => {
+    const {firstName, lastName, age, hairColor} = props;
 
-    }
-
-    render() {
-        return (
-            <div>
-                <h1>{this.props.lastName}, {this.props.firstName}</h1>
-                <p>Age: {this.props.age}</p>
-                <p>Hair Color: {this.props.hairColor}</p>
-            </div>
-        )
-    }
+    return (
+        <div>
+            <h1>{firstName}, {lastName}</h1>
+            <p>Age: {age}</p>
+            <p>Hair Color: {hairColor}</p>
+        </div>
+    )
 }
+
+export default PersonCard
